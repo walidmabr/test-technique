@@ -1,0 +1,32 @@
+
+  .content {
+    padding: 16px;
+  }
+  .side-toolbar {
+    background-color: #274A8C;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .mat-nav-list {
+    a {
+      color: white;
+      font-size: 1.2em;
+      padding: 10px 20px;
+      
+      &:hover {
+        background-color: #274A8C;
+        text-decoration: none;
+      }
+  
+      mat-icon {
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+    }
+  }
+  ::ng-deep.mat-mdc-nav-list .mat-mdc-list-item {
+   border-radius: 0px !important;
+   --mat-mdc-focus-indicator-border-radius: var(--mat-list-active-indicator-shape);
+}

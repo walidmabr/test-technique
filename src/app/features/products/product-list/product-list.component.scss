@@ -1,0 +1,151 @@
+.container {
+    padding: 16px;
+}
+
+.search-field {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+
+.product-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.labels-container {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    z-index: 1;
+}
+
+.flash-sale,
+.promotion,
+.new-product {
+    padding: 4px 8px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 4px;
+    background-color: #000;
+}
+
+.flash-sale {
+    background-color: #274A8C;
+}
+
+.promotion {
+    background-color: #FF6D5B;
+}
+
+.new-product {
+    background-color: rgb(255, 191, 0);
+}
+
+mat-card {
+    position: relative;
+    overflow: hidden;
+}
+
+mat-card img {
+    width: 100%;
+    height: auto;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+.product-title {
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.product-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 4.5em;
+    line-height: 1.5em;
+}
+
+.labels-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.product-card,
+.skeleton-card {
+    width: calc(33.333% - 16px);
+    margin-bottom: 16px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skeleton-header,
+.skeleton-content,
+.skeleton-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.skeleton-header ngx-skeleton-loader,
+.skeleton-content ngx-skeleton-loader,
+.skeleton-actions ngx-skeleton-loader {
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.skeleton-header ngx-skeleton-loader:first-child {
+    height: 20px;
+    width: 60%;
+}
+
+.skeleton-header ngx-skeleton-loader:last-child {
+    height: 16px;
+    width: 40%;
+}
+
+.skeleton-content ngx-skeleton-loader {
+    height: 16px;
+    width: 80%;
+}
+
+.skeleton-actions ngx-skeleton-loader {
+    height: 36px;
+    width: 30%;
+    display: inline-block;
+}
+::ng-deep.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: #fdfbff !important;
+}

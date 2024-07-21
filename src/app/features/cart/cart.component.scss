@@ -1,0 +1,34 @@
+.cart-card {
+    margin: 16px;
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.cart-product-title {
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.cart-product-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 4.5em;
+    line-height: 1.5em;
+}
+
+::ng-deep .mat-mdc-raised-button.mat-primary {
+    background-color:#274A8C;
+    color:#ffffff
+}
+
+::ng-deep.mat-mdc-card {
+    margin-bottom: 35px;
+}

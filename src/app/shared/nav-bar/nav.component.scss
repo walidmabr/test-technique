@@ -1,0 +1,27 @@
+.nav-toolbar {
+    background-color: #274A8C ;
+    color: white;
+  }
+
+  .mat-icon-button {
+    color: white;
+  }
+
+  span {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  .cart-counter {
+    background-color: #FF6D5B;
+    border-radius: 50%;
+    color: white;
+    padding: 1px 4px;
+    position: relative;
+    top: -12px;
+    left: -12px;
+    font-size: 9px;
+  }
+  ::ng-deep .mat-mdc-icon-button .mdc-button__label, .mat-mdc-icon-button .mat-icon {
+    z-index: auto !important;
+    color: #ffffff;
+}

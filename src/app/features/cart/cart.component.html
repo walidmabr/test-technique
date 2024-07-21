@@ -1,0 +1,47 @@
+<span *ngIf="!products.length">
+    <lottie-player
+      src="../../../assets/images/noData.json"
+      background="transparent"
+      speed="1"
+      style="width: 300px; height: 250px; margin: auto"
+      loop
+      autoplay
+    ></lottie-player>
+  </span>
+<ng-container *ngIf="products.length >0 ">
+    <mat-card *ngFor="let product of products" class="cart-card">
+        <mat-card-header>
+            <mat-card-title class="cart-product-title">{{ product.title }}</mat-card-title>
+            <mat-card-subtitle>{{ product.brand }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="product.thumbnail" alt="{{ product.title }}" class="cart-product-image">
+        <mat-card-content>
+            <p class="cart-product-description">{{ product.description }}</p>
+            <p><strong>Price:</strong> {{ product.price | currency }}</p>
+            <p><strong>Rating:</strong> {{ product.rating }}</p>
+            <p><strong>Stock:</strong> {{ product.stock }}</p>
+
+            <div class="quantity-controls">
+                <button mat-icon-button (click)="decreaseQuantity(product.id)" [disabled]="product.quantity === 1">
+                    <mat-icon>remove</mat-icon>
+                </button>
+                <span>{{ product.quantity }}</span>
+                <button mat-icon-button (click)="increaseQuantity(product.id)">
+                    <mat-icon>add</mat-icon>
+                </button>
+            </div>
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button mat-button color="warn" (click)="removeFromCart(product.id)">Remove</button>
+        </mat-card-actions>
+    </mat-card>
+    <mat-card class="cart-summary">
+        <mat-card-content>
+            <p><strong>Subtotal:</strong> {{ totalPrice$ | async | currency }}</p>
+            <p><strong>Shipping Fee:</strong> ${{shippingFee}}</p>
+            <p><strong>Total:</strong> {{ totalWithShipping$ | async | currency }}</p>
+            <button mat-raised-button color="primary" (click)="confirmOrder()">Confirm Order</button>
+        </mat-card-content>
+    </mat-card>
+</ng-container>

@@ -12,7 +12,7 @@ interface ProductState {
 
 const initialState: ProductState = {
     products: [],
-    totalPrice: 0  // Initial value
+    totalPrice: 0
 };
 
 export const ADD_PRODUCT = '[Product] Add Product';
@@ -43,5 +43,5 @@ export const deleteProduct = createAction(
 
 export const initializeProducts = createAction(
     INITIALIZE_PRODUCTS,
-    props<{ products: Product[] }>()   
+    props<{ products: Product[] }>()
 );

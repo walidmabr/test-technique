@@ -66,18 +66,6 @@ export class ProductListComponent implements OnInit {
     const filterValue = (event.target as HTMLInputElement).value;
     this.searchInputSubject.next(filterValue);
   }
-  // onSearch(event: Event): void {
-  //   const target = event.target as HTMLInputElement;
-  //   const value = target?.value;
-  //   if (value) {
-  //     this.searchTerm = value;
-  //     this.productService.searchProduct(this.searchTerm).subscribe(res => {
-  //       this.products = res;
-  //       this.updatePaginatedProducts();
-  //     });
-  //   }
-  // }
-
   onPageChange(page: number) {
     this.page = page;
     this.updatePaginatedProducts();
